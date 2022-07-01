@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/index.module.css'
 import Link from 'next/link'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
+import {AiOutlineCloseSquare} from 'react-icons/ai'
 
 export default function Navbar() {
     return (
@@ -31,6 +32,15 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
+            <div className={`${styles.cartMain}`}>
+                    <div id={`${styles.closeDivId}`} className='text-end fs-3'><AiOutlineCloseSquare className='m-3'/></div>
+                    <h2>Cart section</h2>
+                    <ol>
+                        <li>first item(3)</li>
+                        <li>second item(5)</li>
+                    </ol>
+            </div>
+
         </div>
     )
 }

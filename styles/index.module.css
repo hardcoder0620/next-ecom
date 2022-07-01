@@ -3,6 +3,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
+  z-index: 5;
 }
 .navbarComponent .navlinkActive {
   border-bottom: 2px solid grey;
@@ -19,9 +20,22 @@
 }
 
 .homeBannerComponent .homeBanner {
-  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+
+.cartMain {
+  color: red;
+  background-color: white;
+  z-index: 6;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+.cartMain #closeDivId {
+  cursor: pointer;
 }/*# sourceMappingURL=index.module.css.map */

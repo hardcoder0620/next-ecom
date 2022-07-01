@@ -11,6 +11,8 @@ export default function Home() {
   return (
     <>
     <Navbar/>
+    
+    
     {/* <img className='img-fluid w-100' src="/images/homeBanner.webp" alt="" /> */}
     <HomeBanner/>
     <Footer />
