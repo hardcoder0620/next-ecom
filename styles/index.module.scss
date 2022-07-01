@@ -1,0 +1,35 @@
+// navbar css here 
+.navbarComponent{
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.24);
+  position: sticky;
+  top: 0px;
+
+    .navlinkActive{
+        border-bottom: 2px solid grey;
+       
+    }
+    .navLink{
+        font-weight: bold;
+        a:hover{
+            color: black;
+        }
+    }
+    .shopIcon{
+        font-size: 26px;
+        color: black;
+    }
+}
+// home banner css here 
+.homeBannerComponent{
+
+    .homeBanner{
+
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+
+    }
+
+}
+
+
