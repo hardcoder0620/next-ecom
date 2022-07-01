@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from '../styles/index.module.css'
 import Link from 'next/link'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
-import {AiOutlineCloseSquare} from 'react-icons/ai'
+import {AiOutlineCloseSquare,AiOutlinePlus,AiOutlineMinus} from 'react-icons/ai'
 
 export default function Navbar() {
+    const [cartToggler,setCartToggler]=useState(false);
+    function showCartToggler(){
+        setCartToggler(!cartToggler);
+    }
     return (
         <div className={styles.navbarComponent}>
             <nav className="navbar navbar-expand-lg bg-white">
@@ -27,18 +31,25 @@ export default function Navbar() {
                             </li>
                         </ul>
                        <div className="cartDiv">
-                            <HiOutlineShoppingCart className={`${styles.shopIcon}`}/>
+                           
+                             <HiOutlineShoppingCart onClick={showCartToggler} className={`${styles.shopIcon}`}/>
+                            
                        </div>
                     </div>
                 </div>
             </nav>
-            <div className={`${styles.cartMain}`}>
-                    <div id={`${styles.closeDivId}`} className='text-end fs-3'><AiOutlineCloseSquare className='m-3'/></div>
+            <div className={`${styles.cartMain} ${ cartToggler?  styles.showCart: ""}`}>
+                    <div id={`${styles.closeDivId}`} className='text-end fs-3'><AiOutlineCloseSquare onClick={showCartToggler} className='m-3'/></div>
                     <h2>Cart section</h2>
-                    <ol>
-                        <li>first item(3)</li>
-                        <li>second item(5)</li>
+                    <ol style={{userSelect: "none"}}>
+                        <li className='fs-5'>first item  <span className='mx-2 fw-bold float-end '> <AiOutlineMinus style={{cursor:"pointer"}} /> <span className="mx-2"><span>4</span> </span> <AiOutlinePlus  style={{cursor:"pointer"}}/> </span></li>
+                        <li className='fs-5'>second item  <span className='mx-2 fw-bold float-end '> <AiOutlineMinus  style={{cursor:"pointer"}}/> <span className="mx-2"> <span>2</span></span> <AiOutlinePlus  style={{cursor:"pointer"}}/> </span></li>
                     </ol>
+                    <div className="d-flex  justify-content-center mt-4 ">
+
+                    <button className="btn btn-primary ms-2">checkout</button>
+                    <button className="btn btn-dark ms-2">clear checkout</button>
+                    </div>
             </div>
 
         </div>

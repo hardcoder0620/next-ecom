@@ -18,6 +18,7 @@
     .shopIcon{
         font-size: 26px;
         color: black;
+        cursor: pointer;
     }
 }
 // home banner css here 
@@ -34,17 +35,28 @@
 }
 // cart css 
 .cartMain{
-    color: red;
+    width: 30%;
+     padding: 20px;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.507);
     background-color: white;
     z-index: 6;
     position: fixed;
     top: 0px;
-    left: 0px;
+    
     bottom: 0px;
     right: 0px;
+    transform: translateX(100%);
+    transition: all .5s;
+    @media screen  and (max-width:500px){
+        width: 100%;
+        
+    }
     #closeDivId{
         cursor: pointer;
     }
 
+}
+.showCart{
+    transform: translateX(0%);
 }
 
