@@ -36,7 +36,7 @@ export default function Slug() {
                   </div>
                   <hr />
                   <div className="prize fw-bold fs-4 text-success">
-                    643749/-
+                    $643749/-
                   </div>
                   <div className="addToCartBtn">
                     <button className="btn btn-primary btn-sm m-3 ms-0">Add to cart</button>
