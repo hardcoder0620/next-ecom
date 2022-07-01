@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className={styles.navbarComponent}>
             <nav className="navbar navbar-expand-lg bg-white">
                 <div className="container">
-                    <div className="navbar-brand" > <Link href={"/"}>CodesWear</Link> </div>
+                    <div className="navbar-brand" > <Link href={"/"}>CodeCloths</Link> </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
