@@ -10,6 +10,22 @@ export default function Navbar() {
         setCartToggler(!cartToggler);
     }
     return (
+        
+        <>
+   
+        <style jsx>
+            {`
+                .navbarComponent{
+
+                    margin-top : 300px;
+                    border: 1px solid red;
+                    font-size : 200px;
+                }
+                    
+            `}
+
+        </style>
+       
         <div className={styles.navbarComponent}>
             <nav className="navbar navbar-expand-lg bg-white">
                 <div className="container">
@@ -20,14 +36,14 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <div className={`${styles.navLink} nav-link`} aria-current="page"> <Link  href={"/tshirts"}>Tshirts</Link> </div>
+                                <div className={`${styles.navLink}  nav-link`} aria-current="page"> <Link  href={"/tshirts"}>Tshirts</Link> </div>
                             </li>
                             <li className="nav-item">
-                            <div className={`${styles.navLink} nav-link`} aria-current="page"> <Link  href={"/hoodies"}>Hoodies</Link> </div>
+                            <div className={`${styles.navLink}  nav-link`} aria-current="page"> <Link  href={"/hoodies"}>Hoodies</Link> </div>
                             </li>
                           
                             <li className="nav-item">
-                            <div className={`${styles.navLink} nav-link`} aria-current="page"> <Link  href={"/mugs"}>Mugs</Link> </div>
+                            <div className={`${styles.navLink}  nav-link`} aria-current="page"> <Link  href={"/mugs"}>Mugs</Link> </div>
                             </li>
                         </ul>
                        <div className="cartDiv">
@@ -53,5 +69,6 @@ export default function Navbar() {
             </div>
 
         </div>
+        </>
     )
 }
